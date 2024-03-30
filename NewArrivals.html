@@ -9,6 +9,40 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get all the "Add to Cart" buttons
+        const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+
+        // Get the cart count element
+        const cartCountElement = document.getElementById('cartAmountTopRight');
+
+        // Initialize cart count
+        let cartCount = 0;
+
+        // Function to handle click on "Add to Cart" button
+        function addToCartClicked(event) {
+            // Prevent the default action of the button
+            event.preventDefault();
+            
+            // Get the product name from the data-product attribute
+            const productName = event.target.getAttribute('data-product');
+            
+            // Increment cart count
+            cartCount++;
+            
+            // Update cart count displayed in the cart icon
+            cartCountElement.textContent = cartCount;
+        }
+
+        // Add click event listeners to each "Add to Cart" button
+        addToCartButtons.forEach(function(button) {
+            button.addEventListener('click', addToCartClicked);
+        });
+    });
+</script>
+
 </head>
 <body>
 
@@ -29,7 +63,13 @@
                         <li><a href="Account.html">Account</a></li>
                         </ul>
                     </nav>
-                    <img src="cart-removebg-preview.png" width="30px" height="30px">
+<!-- Cart Icon with cart image and cart count -->
+<!-- Cart Icon with cart count and cart image -->
+<a class="nav-link" href="#" id="cartIcon">
+    <span class="cart-count" id="cartAmountTopRight">0</span>
+    <img src="cart-removebg-preview.png" width="30px" height="30px" alt="Cart">
+</a>
+
                 </div>
 
     </header>
@@ -38,10 +78,10 @@
         <!-- main  -->
         <main>
             <div class="small-container">
-                <h2 class="title">New Arrivals</h2>
+                <h2 class="title">Featured Products</h2>
                 <div class="row">
                     <div class="col-4">
-                        <img src="i5.jfif" alt="please add image">
+                        <img src="image_zoom.jpeg" alt="please add image">
                         <h4>Buttoned T-Shirts</h4>
                         <div class="rating">
                             <i class="fa-solid fa-star"></i>
@@ -51,22 +91,86 @@
                             <i class="fa-regular fa-star"></i>
                         </div>
                         <p>$50.00</p>
-                        <button class="add-to-cart-btn" data-product="Buttoned T-Shirts">Add to Cart</button>
+                        <!-- Add to Cart button -->
+<!-- Add to Cart button -->
+<button class="add-to-cart-btn" data-product="Buttoned T-Shirts">Add to Cart</button>
+
                     </div>
-                    <!-- Repeat the similar structure for other products -->
+                    <div class="col-4">
+                        <img src="image_zoom (1).jpeg" alt="please add image">
+                        <h4>Baggy Style</h4>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p>$50.00</p>
+                        <button class="add-to-cart-btn" data-product="Buttoned T-Shirts">Add to Cart</button>
+
+                    </div>
+                    <div class="col-4">
+                        <img src="image_zoom.jpeg" alt="please add image">
+                        <h4>Scarf Neck</h4>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p>$50.00</p>
+                        <button class="add-to-cart-btn" data-product="Buttoned T-Shirts">Add to Cart</button>
+
+                    </div>
                 </div>
                 <h2 class="title">Latest Products</h2>
                 <div class="row">
-                    <!-- Repeat the similar structure for latest products -->
+                    <div class="col-4">
+                        <img src="Capture1.PNG" alt="please add image">
+                        <h4>Nude Color</h4>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p>$50.00</p>
+                        <button class="add-to-cart-btn" data-product="Buttoned T-Shirts">Add to Cart</button>
+
+                    </div>
+                    <div class="col-4">
+                        <img src="Capture.PNG" alt="please add image">
+                        <h4>Turtle Neck</h4>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p>$50.00</p>
+                        <button class="add-to-cart-btn" data-product="Buttoned T-Shirts">Add to Cart</button>
+
+                    </div>
+                    <div class="col-4">
+                        <img src="Capture.PNG" alt="please add image">
+                        <h4>Short Coats</h4>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p>$50.00</p>
+                        <button class="add-to-cart-btn" data-product="Buttoned T-Shirts">Add to Cart</button>
+
+                    </div>
                 </div>
             </div>
-            
-            <!-- Cart Icon -->
-            <div class="cart-icon">
-                <i class="fa-solid fa-shopping-cart"></i>
-                <span class="cart-count">0</span>
-            </div>
-            
         <!--exclusive products-->
         <div class="offer">
             <div class="small-container">
