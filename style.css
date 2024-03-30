@@ -6,6 +6,17 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+
+.cart-count {
+  position: absolute;
+  margin-bottom: 30px;
+  right: 30px;
+  
+  color: black; /* Optional: add styling to the cart count */
+  padding: 5px; /* Optional: add styling to the cart count */
+  border-radius: 50%; /* Optional: add styling to the cart count */
+}
+
 .navbar{
     display: flex;
     align-items: center;
@@ -54,6 +65,15 @@ p{
     font-size: 50px;
     line-height: 60px;
     margin: 25px 0;
+}
+.add-to-cart-btn{
+  display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
 }
 .btn{
     display: inline-block;
