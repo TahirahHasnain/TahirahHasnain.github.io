@@ -309,6 +309,11 @@ small{
    
   }
 
-
-
-  
+  .scrollable-content {
+    height: 150px; /* Adjust based on your requirement */
+    width: 100%; /* Adjust if you want a specific width */
+    overflow-y: scroll; /* Enables vertical scrolling */
+    padding: 15px;
+    border: 1px solid #ccc; /* Optional, adds a border around the scrollable area */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional, adds shadow for better visibility */
+}
